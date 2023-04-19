@@ -52,7 +52,6 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = text=event.message.text
-    line_bot_api.reply_message(event.reply_token, TextSendMessage('請打「開始」來評論圖片'))
     if re.match('開始',message):
         image_message = ImageSendMessage(
             original_content_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
