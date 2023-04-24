@@ -72,7 +72,7 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    else if re.match('美食推薦',message):
+    if re.match('美食推薦',message):
         buttons_template_message = TemplateSendMessage(
         alt_text='美食推薦',
         template=ButtonsTemplate(
@@ -104,7 +104,7 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    else if re.match('美食分類',message):
+    if re.match('美食分類',message):
         buttons_template_message = TemplateSendMessage(
         alt_text='美食分類',
         template=ButtonsTemplate(
@@ -136,14 +136,6 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    else if re.match('台式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('很讚'))
-    else if re.match('日式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('喔伊西'))
-    else if re.match('韓式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('馬西搜有'))
-    else if re.match('美式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('delicious'))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
 #主程式
