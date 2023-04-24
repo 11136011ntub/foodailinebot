@@ -27,7 +27,7 @@ line_bot_api = LineBotApi('Lc784A6vOQ68FRGL+hPMY2pcLN0N7Ixg3iLIF+jq3Khz33+WrFU6H
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('3803b1d0d78a4ba602ef3585337cc7fe')
 
-line_bot_api.push_message('U36aee765eb76dd68a7940fd75243a994', TextSendMessage(text='你可以開始了'))
+line_bot_api.push_message('U36aee765eb76dd68a7940fd75243a994', TextSendMessage(text='歡迎來到美食探勘家，請輸入『開始』來尋找美食'))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -56,7 +56,7 @@ def handle_message(event):
         buttons_template_message = TemplateSendMessage(
         alt_text='主選單',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
+            thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
             title='美食探勘家',
             text='美食探勘家',
             actions=[
@@ -72,7 +72,7 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    if re.match('美食推薦',message):
+    elif re.match('美食推薦',message):
         buttons_template_message = TemplateSendMessage(
         alt_text='美食推薦',
         template=ButtonsTemplate(
@@ -104,7 +104,7 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    if re.match('美食分類',message):
+    elif re.match('美食分類',message):
         buttons_template_message = TemplateSendMessage(
         alt_text='美食分類',
         template=ButtonsTemplate(
@@ -136,8 +136,16 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    #else if re.match('台式美食',message):
+    #    line_bot_api.reply_message(event.reply_token, TextSendMessage('很讚'))
+    #else if re.match('日式美食',message):
+    #    line_bot_api.reply_message(event.reply_token, TextSendMessage('喔伊西'))
+    #else if re.match('韓式美食',message):
+    #    line_bot_api.reply_message(event.reply_token, TextSendMessage('馬西搜有'))
+    #else if re.match('美式美食',message):
+    #    line_bot_api.reply_message(event.reply_token, TextSendMessage('delicious'))
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('請打「開始」來評論圖片'))
 #主程式
 import os
 if __name__ == "__main__":
