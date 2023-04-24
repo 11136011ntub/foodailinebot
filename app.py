@@ -58,7 +58,7 @@ def handle_message(event):
         template=ButtonsTemplate(
             thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
             title='美食探勘家',
-            text='選單功能－TemplateSendMessage',
+            text='美食探勘家',
             actions=[
                 MessageAction(
                     label='美食推薦',
@@ -72,6 +72,8 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    else:
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('請打「開始」來評論圖片'))
     if re.match('美食推薦',message):
         buttons_template_message = TemplateSendMessage(
         alt_text='美食推薦',
@@ -136,8 +138,6 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('請打「開始」來評論圖片'))
 #主程式
 import os
 if __name__ == "__main__":
