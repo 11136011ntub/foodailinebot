@@ -136,6 +136,14 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    else if re.match('台式美食',message):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('很讚'))
+    else if re.match('日式美食',message):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('喔伊西'))
+    else if re.match('韓式美食',message):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('馬西搜有'))
+    else if re.match('美式美食',message):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('delicious'))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage('請打「開始」來評論圖片'))
 #主程式
