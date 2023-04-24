@@ -80,26 +80,22 @@ def handle_message(event):
             title='美食探勘家',
             text='美食推薦',
             actions=[
-                PostbackAction(
+                MessageAction(
                     label='台式美食',
-                    display_text='台式美食',
-                    data='action=taiwan'
+                    text='台式美食'
                 ),
-                PostbackAction(
+                MessageAction(
                     label='日式美食',
-                    display_text='日式美食',
-                    data='action=Japan'
+                    text='日式美食'
                 ),
-                PostbackAction(
+                MessageAction(
                     label='韓式美食',
-                    display_text='韓式美食',
-                    data='action=Korea'
+                    text='韓式美食'
                 ),
-                PostbackAction(
+                MessageAction(
                     label='美式美食',
-                    display_text='美式美食',
-                    data='action=America'
-                ),
+                    text='美式美食'
+                )
             ]
         )
     )
@@ -112,26 +108,22 @@ def handle_message(event):
             title='美食探勘家',
             text='美食分類',
             actions=[
-                PostbackAction(
+                MessageAction(
                     label='台式美食',
-                    display_text='台式美食',
-                    data='action=taiwan'
+                    text='台式美食'
                 ),
-                PostbackAction(
+                MessageAction(
                     label='日式美食',
-                    display_text='日式美食',
-                    data='action=Japan'
+                    text='日式美食'
                 ),
-                PostbackAction(
+                MessageAction(
                     label='韓式美食',
-                    display_text='韓式美食',
-                    data='action=Korea'
+                    text='韓式美食'
                 ),
-                PostbackAction(
+                MessageAction(
                     label='美式美食',
-                    display_text='美式美食',
-                    data='action=America'
-                ),
+                    text='美式美食'
+                )
             ]
         )
     )
