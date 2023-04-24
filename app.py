@@ -27,7 +27,7 @@ line_bot_api = LineBotApi('Lc784A6vOQ68FRGL+hPMY2pcLN0N7Ixg3iLIF+jq3Khz33+WrFU6H
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('3803b1d0d78a4ba602ef3585337cc7fe')
 
-line_bot_api.push_message('U36aee765eb76dd68a7940fd75243a994', TextSendMessage(text='歡迎來到美食探勘家，請輸入『開始』來尋找美食'))
+line_bot_api.push_message('U36aee765eb76dd68a7940fd75243a994', TextSendMessage(text='你可以開始了'))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -52,100 +52,33 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = text=event.message.text
-    if re.match('開始',message):
+    if re.match('告訴我秘密',message):
         buttons_template_message = TemplateSendMessage(
-        alt_text='主選單',
+        alt_text='這個看不到',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
-            title='美食探勘家',
-            text='美食探勘家',
+            thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
+            title='行銷搬進大程式',
+            text='選單功能－TemplateSendMessage',
             actions=[
+                PostbackAction(
+                    label='偷偷傳資料',
+                    display_text='檯面上',
+                    data='action=檯面下'
+                ),
                 MessageAction(
-                    label='美食推薦',
-                    text='美食推薦'
+                    label='光明正大傳資料',
+                    text='我就是資料'
                 ),
-                MessageAction(
-                    label='美食分類',
-                    text='美食分類'
-                ),
+                URIAction(
+                    label='行銷搬進大程式',
+                    uri='https://marketingliveincode.com/'
+                )
             ]
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    else if re.match('美食推薦',message):
-        buttons_template_message = TemplateSendMessage(
-        alt_text='美食推薦',
-        template=ButtonsTemplate(
-            thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
-            title='美食探勘家',
-            text='美食推薦',
-            actions=[
-                PostbackAction(
-                    label='台式美食',
-                    display_text='台式美食',
-                    data='action=taiwan'
-                ),
-                PostbackAction(
-                    label='日式美食',
-                    display_text='日式美食',
-                    data='action=Japan'
-                ),
-                PostbackAction(
-                    label='韓式美食',
-                    display_text='韓式美食',
-                    data='action=Korea'
-                ),
-                PostbackAction(
-                    label='美式美食',
-                    display_text='美式美食',
-                    data='action=America'
-                ),
-            ]
-        )
-    )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    else if re.match('美食分類',message):
-        buttons_template_message = TemplateSendMessage(
-        alt_text='美食分類',
-        template=ButtonsTemplate(
-            thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
-            title='美食探勘家',
-            text='美食分類',
-            actions=[
-                PostbackAction(
-                    label='台式美食',
-                    display_text='台式美食',
-                    data='action=taiwan'
-                ),
-                PostbackAction(
-                    label='日式美食',
-                    display_text='日式美食',
-                    data='action=Japan'
-                ),
-                PostbackAction(
-                    label='韓式美食',
-                    display_text='韓式美食',
-                    data='action=Korea'
-                ),
-                PostbackAction(
-                    label='美式美食',
-                    display_text='美式美食',
-                    data='action=America'
-                ),
-            ]
-        )
-    )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    else if re.match('台式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('很讚'))
-    else if re.match('日式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('喔伊西'))
-    else if re.match('韓式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('馬西搜有'))
-    else if re.match('美式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('delicious'))
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('請打「開始」來評論圖片'))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
 #主程式
 import os
 if __name__ == "__main__":
