@@ -396,12 +396,15 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('日式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('喔伊西'))
+        flex_message = FlexSendMessage(
+            alt_text='行銷搬進大程式',
+            contents={...} #json貼在這裡
+        )
+        line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('韓式美食',message):
-      flex_message = FlexSendMessage(
-            alt_text='美食探勘家',
-            contents=
-        {
+flex_message = FlexSendMessage(
+            alt_text='行銷搬進大程式',
+            contents={
   "type": "carousel",
   "contents": [
     {
@@ -663,10 +666,14 @@ def handle_message(event):
     }
   ]
 }
-)
+        )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('美式美食',message):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('delicious'))
+        flex_message = FlexSendMessage(
+            alt_text='行銷搬進大程式',
+            contents={...} #json貼在這裡
+        )
+        line_bot_api.reply_message(event.reply_token, flex_message)
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage('請輸入『開始』來尋找美食'))
 #主程式
