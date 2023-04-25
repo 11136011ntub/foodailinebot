@@ -132,30 +132,30 @@ def handle_message(event):
         flex_message = FlexSendMessage(
             alt_text='美食探勘家',
             contents={
-  "type": "carousel",
-  "contents": [
-    {
-      "type": "bubble",
-      "size": "micro",
-      "hero": {
-        "type": "image",
-        "url": "https://angelala.tw/wp-content/uploads/img/20170201210716_49.jpg",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "320:213"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
+            "type": "carousel",
+            "contents": [
+            {
+            "type": "bubble",
+            "size": "micro",
+            "hero": {
+                "type": "image",
+                "url": "https://angelala.tw/wp-content/uploads/img/20170201210716_49.jpg",
+                "size": "full",
+                "aspectMode": "cover",
+                "aspectRatio": "320:213"
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+            {
             "type": "text",
             "text": "臭豆腐",
             "weight": "bold",
             "size": "sm",
             "wrap": True
-          },
-          {
+            },
+            {
             "type": "box",
             "layout": "baseline",
             "contents": [
@@ -193,8 +193,8 @@ def handle_message(event):
                 "flex": 0
               }
             ]
-          },
-          {
+            },
+            {
             "type": "box",
             "layout": "vertical",
             "contents": [
@@ -214,34 +214,34 @@ def handle_message(event):
                 ]
               }
             ]
-          }
+            }
         ],
         "spacing": "sm",
         "paddingAll": "13px"
-      }
-    },
-    {
-      "type": "bubble",
-      "size": "micro",
-      "hero": {
-        "type": "image",
-        "url": "https://cc.tvbs.com.tw/img/program/upload/2022/10/03/20221003162350-04e23b19.jpg",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "320:213"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "牛肉麵",
-            "weight": "bold",
-            "size": "sm",
-            "wrap": True
-          },
-          {
+        }
+        },
+        {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+            "type": "image",
+            "url": "https://cc.tvbs.com.tw/img/program/upload/2022/10/03/20221003162350-04e23b19.jpg",
+            "size": "full",
+            "aspectMode": "cover",
+            "aspectRatio": "320:213"
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+            {
+                "type": "text",
+                "text": "牛肉麵",
+                "weight": "bold",
+                "size": "sm",
+                "wrap": True
+            },
+            {
             "type": "box",
             "layout": "baseline",
             "contents": [
@@ -279,8 +279,8 @@ def handle_message(event):
                 "flex": 0
               }
             ]
-          },
-          {
+            },
+            {
             "type": "box",
             "layout": "vertical",
             "contents": [
@@ -300,33 +300,33 @@ def handle_message(event):
                 ]
               }
             ]
-          }
-        ],
-        "spacing": "sm",
-        "paddingAll": "13px"
-      }
-    },
-    {
-      "type": "bubble",
-      "size": "micro",
-      "hero": {
-        "type": "image",
-        "url": "https://tokyo-kitchen.icook.network/uploads/recipe/cover/407415/925ffeec2b1f9747.jpg",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "320:213"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
+            }
+            ],
+         "spacing": "sm",
+         "paddingAll": "13px"
+        }
+        },
+        {
+        "type": "bubble",
+        "size": "micro",
+        "hero": {
+            "type": "image",
+            "url": "https://tokyo-kitchen.icook.network/uploads/recipe/cover/407415/925ffeec2b1f9747.jpg",
+            "size": "full",
+            "aspectMode": "cover",
+            "aspectRatio": "320:213"
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+            {
             "type": "text",
             "text": "鹹酥雞",
             "weight": "bold",
             "size": "sm"
-          },
-          {
+            },
+            {
             "type": "box",
             "layout": "baseline",
             "contents": [
@@ -364,8 +364,8 @@ def handle_message(event):
                 "flex": 0
               }
             ]
-          },
-          {
+            },
+            {
             "type": "box",
             "layout": "vertical",
             "contents": [
@@ -385,14 +385,14 @@ def handle_message(event):
                 ]
               }
             ]
-          }
-        ],
-        "spacing": "sm",
-        "paddingAll": "13px"
-      }
+            }
+            ],
+            "spacing": "sm",
+          "paddingAll": "13px"
+        }
+        }
+    ]
     }
-  ]
-}
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('日式美食',message):
@@ -402,7 +402,7 @@ def handle_message(event):
     elif re.match('美式美食',message):
         line_bot_api.reply_message(event.reply_token, TextSendMessage('delicious'))
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('請輸入『開始』來尋找美食')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('請輸入『開始』來尋找美食'))
 #主程式
 import os
 if __name__ == "__main__":
