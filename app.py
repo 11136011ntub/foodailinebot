@@ -420,7 +420,7 @@ def handle_message(event):
             "text": "壽司",
             "weight": "bold",
             "size": "sm",
-            "wrap": true
+            "wrap": True
           },
           {
             "type": "box",
@@ -473,7 +473,7 @@ def handle_message(event):
                   {
                     "type": "text",
                     "text": "寿司",
-                    "wrap": true,
+                    "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
                     "flex": 5
@@ -506,7 +506,7 @@ def handle_message(event):
             "text": "拉麵",
             "weight": "bold",
             "size": "sm",
-            "wrap": true
+            "wrap": True
           },
           {
             "type": "box",
@@ -559,7 +559,7 @@ def handle_message(event):
                   {
                     "type": "text",
                     "text": "ラーメン",
-                    "wrap": true,
+                    "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
                     "flex": 5
@@ -644,7 +644,7 @@ def handle_message(event):
                   {
                     "type": "text",
                     "text": "ざるそば",
-                    "wrap": true,
+                    "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
                     "flex": 5
