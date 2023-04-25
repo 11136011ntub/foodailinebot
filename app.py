@@ -396,10 +396,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('日式美食',message):
-        flex_message = FlexSendMessage(
-            line_bot_api.reply_message(event.reply_token, TextSendMessage('歐伊西'))
-        )
-        line_bot_api.reply_message(event.reply_token, flex_message)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('歐伊西'))
     elif re.match('韓式美食',message):
 flex_message = FlexSendMessage(
             alt_text='行銷搬進大程式',
@@ -668,10 +665,7 @@ flex_message = FlexSendMessage(
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('美式美食',message):
-        flex_message = FlexSendMessage(
-            line_bot_api.reply_message(event.reply_token, TextSendMessage('delicious'))
-        )
-        line_bot_api.reply_message(event.reply_token, flex_message)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('delicious'))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage('請輸入『開始』來尋找美食'))
 #主程式
