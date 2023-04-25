@@ -931,7 +931,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('美式美食',message):
         flex_message = FlexSendMessage(
-            alt_text='行銷搬進大程式',
+            alt_text='美食推薦-美式',
             contents={
   "type": "carousel",
   "contents": [
