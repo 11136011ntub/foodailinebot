@@ -466,72 +466,38 @@ def handle_message(event):
         flex_message = FlexSendMessage(
             alt_text='美食推薦-韓式',
             contents={
-            "type": "carousel",
-            "contents": [
-            {
-              "type": "bubble",
-              "size": "micro",
-              "hero": {
-              "type": "image",
-              "url": "https://storage.googleapis.com/crossing-cms-cwg-tw/article/202202/article-6204ea39d454e.jpeg",
-              "size": "full",
-              "aspectMode": "cover",
-              "aspectRatio": "320:213"
-            },
-            "body": {
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://storage.googleapis.com/crossing-cms-cwg-tw/article/202202/article-6204ea39d454e.jpeg",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "韓式拌飯",
+            "weight": "bold",
+            "size": "xl",
+            "wrap": True
+          },
+          {
+            "type": "text",
+            "text": "비빔밥",
+            "size": "xs"
+          },
+          {
             "type": "box",
             "layout": "vertical",
             "contents": [
-            {
-              "type": "text",
-              "text": "韓式拌飯",
-              "weight": "bold",
-              "size": "sm",
-              "wrap": True
-            },
-            {
-              "type": "box",
-              "layout": "baseline",
-              "contents": [
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
-              },
-              {
-                "type": "text",
-                "text": "4.0",
-                "size": "xs",
-                "color": "#8c8c8c",
-                "margin": "md",
-                "flex": 0
-              }
-              ]
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
               {
                 "type": "box",
                 "layout": "baseline",
@@ -539,7 +505,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "비빔밥",
+                    "text": "韓式美食",
                     "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
@@ -547,187 +513,119 @@ def handle_message(event):
                   }
                 ]
               }
-              ]
-            }
-            ],
-            "spacing": "sm",
-            "paddingAll": "13px"
-            }
-          },
-          {
-            "type": "bubble",
-            "size": "micro",
-            "hero": {
-              "type": "image",
-              "url": "https://www.hanchao.com/varimg/cate/2169_guide_big.jpg",
-              "size": "full",
-              "aspectMode": "cover",
-              "aspectRatio": "320:213"
-            },
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-              {
-                "type": "text",
-                "text": "冷麵",
-                "weight": "bold",
-                "size": "sm",
-                "wrap": True
-              },
-              {
-                "type": "box",
-                "layout": "baseline",
-                "contents": [
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "text",
-                  "text": "5.0",
-                  "size": "sm",
-                  "color": "#8c8c8c",
-                  "margin": "md",
-                  "flex": 0
-                }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "sm",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "냉면",
-                      "wrap": True,
-                      "color": "#8c8c8c",
-                      "size": "xs",
-                      "flex": 5
-                    }
-                  ]
-                }
-                ]
-              }
-            ],
-            "spacing": "sm",
-            "paddingAll": "13px"
-            }
-          },
-          {
-            "type": "bubble",
-            "size": "micro",
-            "hero": {
-              "type": "image",
-              "url": "https://a.ksd-i.com/a/2017-07-28/96760-528725.png",
-              "size": "full",
-              "aspectMode": "cover",
-              "aspectRatio": "320:213"
-            },
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "部隊鍋",
-                  "weight": "bold",
-                  "size": "sm"
-                },
-              {
-                "type": "box",
-                "layout": "baseline",
-                "contents": [
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "icon",
-                  "size": "xs",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                },
-                {
-                  "type": "text",
-                  "text": "5.0",
-                  "size": "sm",
-                  "color": "#8c8c8c",
-                  "margin": "md",
-                  "flex": 0
-                }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "sm",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "부대찌개",
-                      "wrap": True,
-                      "color": "#8c8c8c",
-                      "size": "xs",
-                      "flex": 5
-                    }
-                  ]
-                }
-                ]
-              }
-            ],
-            "spacing": "sm",
-            "paddingAll": "13px"
+            ]
           }
-        }
-      ]
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://www.hanchao.com/varimg/cate/2169_guide_big.jpg",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "冷麵",
+            "weight": "bold",
+            "size": "xl",
+            "wrap": True
+          },
+          {
+            "type": "text",
+            "text": "냉면",
+            "size": "xs"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "韓式美食",
+                    "wrap": True,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "micro",
+      "hero": {
+        "type": "image",
+        "url": "https://a.ksd-i.com/a/2017-07-28/96760-528725.png",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "部隊鍋",
+            "weight": "bold",
+            "size": "xl"
+          },
+          {
+            "type": "text",
+            "text": "부대찌개",
+            "size": "xs"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "韓式美食",
+                    "wrap": True,
+                    "color": "#8c8c8c",
+                    "size": "xs",
+                    "flex": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      }
     }
-    )
+  ]
+} #json貼在這裡
+        )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('美式美食',message):
         flex_message = FlexSendMessage(
@@ -753,47 +651,13 @@ def handle_message(event):
             "type": "text",
             "text": "漢堡",
             "weight": "bold",
-            "size": "sm",
+            "size": "xl",
             "wrap": True
           },
           {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
-              },
-              {
-                "type": "text",
-                "text": "4.0",
-                "size": "xs",
-                "color": "#8c8c8c",
-                "margin": "md",
-                "flex": 0
-              }
-            ]
+            "type": "text",
+            "text": "hamburger",
+            "size": "xs"
           },
           {
             "type": "box",
@@ -806,7 +670,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "hamburger",
+                    "text": "美式美食",
                     "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
@@ -839,47 +703,13 @@ def handle_message(event):
             "type": "text",
             "text": "披薩",
             "weight": "bold",
-            "size": "sm",
+            "size": "xl",
             "wrap": True
           },
           {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "text",
-                "text": "5.0",
-                "size": "sm",
-                "color": "#8c8c8c",
-                "margin": "md",
-                "flex": 0
-              }
-            ]
+            "type": "text",
+            "text": "pizza",
+            "size": "xs"
           },
           {
             "type": "box",
@@ -892,7 +722,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "pizza",
+                    "text": "美式美食",
                     "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
@@ -925,46 +755,12 @@ def handle_message(event):
             "type": "text",
             "text": "牛排",
             "weight": "bold",
-            "size": "sm"
+            "size": "xl"
           },
           {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "text",
-                "text": "5.0",
-                "size": "sm",
-                "color": "#8c8c8c",
-                "margin": "md",
-                "flex": 0
-              }
-            ]
+            "type": "text",
+            "text": "steak",
+            "size": "xs"
           },
           {
             "type": "box",
@@ -977,7 +773,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "steak",
+                    "text": "美式美食",
                     "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
@@ -993,7 +789,7 @@ def handle_message(event):
       }
     }
   ]
-}
+} #json貼在這裡
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     else:
