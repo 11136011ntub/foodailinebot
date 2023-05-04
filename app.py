@@ -135,7 +135,7 @@ def handle_message(event):
     elif re.match('台式美食',message):
         flex_message = FlexSendMessage(
             alt_text='台式美食',
-            contents={{
+            contents={
   "type": "carousel",
   "contents": [
     {
@@ -294,7 +294,7 @@ def handle_message(event):
       }
     }
   ]
-}} #json貼在這裡
+} #json貼在這裡
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('日式美食',message):
