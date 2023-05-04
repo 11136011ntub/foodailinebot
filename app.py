@@ -134,7 +134,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     elif re.match('台式美食',message):
         flex_message = FlexSendMessage(
-            alt_text='台式美食',
+            alt_text='美食推薦-台式',
             contents={
   "type": "carousel",
   "contents": [
@@ -321,47 +321,13 @@ def handle_message(event):
             "type": "text",
             "text": "壽司",
             "weight": "bold",
-            "size": "sm",
+            "size": "xl",
             "wrap": True
           },
           {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
-              },
-              {
-                "type": "text",
-                "text": "4.0",
-                "size": "xs",
-                "color": "#8c8c8c",
-                "margin": "md",
-                "flex": 0
-              }
-            ]
+            "type": "text",
+            "text": "寿司",
+            "size": "xs"
           },
           {
             "type": "box",
@@ -374,7 +340,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "寿司",
+                    "text": "日式美食",
                     "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
@@ -407,47 +373,13 @@ def handle_message(event):
             "type": "text",
             "text": "拉麵",
             "weight": "bold",
-            "size": "sm",
+            "size": "xl",
             "wrap": True
           },
           {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "text",
-                "text": "5.0",
-                "size": "sm",
-                "color": "#8c8c8c",
-                "margin": "md",
-                "flex": 0
-              }
-            ]
+            "type": "text",
+            "text": "ラーメン",
+            "size": "xs"
           },
           {
             "type": "box",
@@ -460,7 +392,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "ラーメン",
+                    "text": "日式美食",
                     "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
@@ -493,46 +425,12 @@ def handle_message(event):
             "type": "text",
             "text": "蕎麥麵",
             "weight": "bold",
-            "size": "sm"
+            "size": "xl"
           },
           {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "icon",
-                "size": "xs",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-              },
-              {
-                "type": "text",
-                "text": "5.0",
-                "size": "sm",
-                "color": "#8c8c8c",
-                "margin": "md",
-                "flex": 0
-              }
-            ]
+            "type": "text",
+            "text": "ざるそば",
+            "size": "xs"
           },
           {
             "type": "box",
@@ -545,7 +443,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "ざるそば",
+                    "text": "日式美食",
                     "wrap": True,
                     "color": "#8c8c8c",
                     "size": "xs",
@@ -561,7 +459,7 @@ def handle_message(event):
       }
     }
   ]
-}
+} #json貼在這裡
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('韓式美食',message):
