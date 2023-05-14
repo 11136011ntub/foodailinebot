@@ -56,7 +56,7 @@ def handle_message(event):
         buttons_template_message = TemplateSendMessage(
         alt_text='主選單',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://drive.google.com/file/d/1sZbc05XpQs72Ho73EufKrsUSq4JVVi2v/view?usp=sharing',
+            thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
             title='美食探勘家',
             text='美食探勘家',
             actions=[
