@@ -27,7 +27,7 @@ line_bot_api = LineBotApi('Lc784A6vOQ68FRGL+hPMY2pcLN0N7Ixg3iLIF+jq3Khz33+WrFU6H
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('3803b1d0d78a4ba602ef3585337cc7fe')
 
-line_bot_api.push_message('U36aee765eb76dd68a7940fd75243a994', TextSendMessage(text='歡迎來到食尚共享，請輸入『開始』來尋找美食'))
+line_bot_api.push_message('U36aee765eb76dd68a7940fd75243a994', TextSendMessage(text='歡迎來到美食探勘家，請輸入『開始』來尋找美食'))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -57,8 +57,8 @@ def handle_message(event):
         alt_text='主選單',
         template=ButtonsTemplate(
             thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
-            title='食尚共享',
-            text='食尚共享',
+            title='美食探勘家',
+            text='美食探勘家',
             actions=[
                 MessageAction(
                     label='美食推薦',
@@ -81,7 +81,7 @@ def handle_message(event):
         alt_text='美食推薦',
         template=ButtonsTemplate(
             thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
-            title='食尚共享',
+            title='美食探勘家',
             text='美食推薦',
             actions=[
                 MessageAction(
@@ -109,7 +109,7 @@ def handle_message(event):
         alt_text='美食分類',
         template=ButtonsTemplate(
             thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
-            title='食尚共享',
+            title='美食探勘家',
             text='美食分類',
             actions=[
                 MessageAction(
