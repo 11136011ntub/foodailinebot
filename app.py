@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#載入LineBot所需要的套件
+#套件
 from flask import Flask, request, abort
 
 from linebot import (
@@ -13,7 +13,7 @@ from linebot.models import *
 import re
 app = Flask(__name__)
 
-# 必須放上自己的Channel Access Token
+#Channel Access Token
 line_bot_api = LineBotApi('Lc784A6vOQ68FRGL+hPMY2pcLN0N7Ixg3iLIF+jq3Khz33+WrFU6H/mSf1GbZ3HXqbFikCICKgj2N2CnFFh6QthxlMrzJ0f1h2jMyHea0DXORloKKp7IchYafX4B7fK11uOsfguxawp4y5+xV+CtVwdB04t89/1O/w1cDnyilFU=')
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('3803b1d0d78a4ba602ef3585337cc7fe')
