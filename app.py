@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-#套件
 from flask import Flask, request, abort
 
 from linebot import (
