@@ -13,7 +13,7 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('Lc784A6vOQ68FRGL+hPMY2pcLN0N7Ixg3iLIF+jq3Khz33+WrFU6H/mSf1GbZ3HXqbFikCICKgj2N2CnFFh6QthxlMrzJ0f1h2jMyHea0DXORloKKp7IchYafX4B7fK11uOsfguxawp4y5+xV+CtVwdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('3803b1d0d78a4ba602ef3585337cc7fe')
 
-line_bot_api.push_message('U36aee765eb76dd68a7940fd75243a994', TextSendMessage(text='歡迎來到美食探勘家，請輸入『開始』來尋找美食'))
+line_bot_api.push_message('U36aee765eb76dd68a7940fd75243a994', TextSendMessage(text='歡迎來到美食探勘家，請輸入『開始』或是下方選單來尋找美食'))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
