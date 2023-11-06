@@ -1,15 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jun  2 21:16:35 2021
-
-@author: Ivan
-版權屬於「行銷搬進大程式」所有，若有疑問，可聯絡ivanyang0606@gmail.com
-
-Line Bot聊天機器人
-第三章 互動回傳功能
-推播push_message與回覆reply_message
-"""
-#載入LineBot所需要的套件
 from flask import Flask, request, abort
 
 from linebot import (
