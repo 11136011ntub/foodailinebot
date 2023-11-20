@@ -15,17 +15,13 @@ handler = WebhookHandler('3803b1d0d78a4ba602ef3585337cc7fe')
 
 line_bot_api.push_message('U36aee765eb76dd68a7940fd75243a994', TextSendMessage(text='歡迎來到美食探勘家，請輸入『開始』或是下方選單來尋找美食'))
 
-# 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
-    # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
 
-    # get request body as text
     body = request.get_data(as_text=True)
     app.logger.info("Request body: " + body)
 
-    # handle webhook body
     try:
         handler.handle(body, signature)
     except InvalidSignatureError:
@@ -33,8 +29,6 @@ def callback():
 
     return 'OK'
 
-#訊息傳遞區塊
-##### 基本上程式編輯都在這個function #####
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = text=event.message.text
@@ -280,7 +274,7 @@ def handle_message(event):
       }
     }
   ]
-} #json貼在這裡
+} 
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('日式美食',message):
@@ -445,7 +439,7 @@ def handle_message(event):
       }
     }
   ]
-} #json貼在這裡
+} 
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('韓式美食',message):
@@ -610,7 +604,7 @@ def handle_message(event):
       }
     }
   ]
-} #json貼在這裡
+} 
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('美式美食',message):
@@ -775,7 +769,7 @@ def handle_message(event):
       }
     }
   ]
-} #json貼在這裡
+} 
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     else:
