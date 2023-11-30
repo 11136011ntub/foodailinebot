@@ -45,8 +45,8 @@ def handle_message(event):
                     text='熱門美食'
                 ),
                 MessageAction(
-                    label='美食查詢',
-                    text='美食查詢'
+                    label='美食分類',
+                    text='美食分類'
                 ),
                 MessageAction(
                     label='網站',
@@ -92,13 +92,13 @@ def handle_message(event):
         #)
     #)
         #line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    elif re.match('美食查詢',message):
+    elif re.match('美食分類',message):
         buttons_template_message = TemplateSendMessage(
-        alt_text='美食查詢',
+        alt_text='美食分類',
         template=ButtonsTemplate(
             thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
             title='美食探勘家',
-            text='美食查詢',
+            text='美食分類',
             actions=[
                 MessageAction(
                     label='台式美食',
@@ -122,7 +122,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     elif re.match('台式美食',message):
         flex_message = FlexSendMessage(
-            alt_text='熱門美食-台式',
+            alt_text='美食分類推薦-台式',
             contents={
   "type": "carousel",
   "contents": [
@@ -287,7 +287,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('日式美食',message):
         flex_message = FlexSendMessage(
-            alt_text='熱門美食-日式',
+            alt_text='美食分類推薦-日式',
             contents={
   "type": "carousel",
   "contents": [
@@ -452,7 +452,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('韓式美食',message):
         flex_message = FlexSendMessage(
-            alt_text='熱門美食-韓式',
+            alt_text='美食分類推薦-韓式',
             contents={
   "type": "carousel",
   "contents": [
@@ -617,7 +617,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, flex_message)
     elif re.match('美式美食',message):
         flex_message = FlexSendMessage(
-            alt_text='熱門美食-美式',
+            alt_text='美食分類推薦-美式',
             contents={
   "type": "carousel",
   "contents": [
