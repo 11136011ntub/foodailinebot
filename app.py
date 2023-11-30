@@ -65,20 +65,48 @@ def handle_message(event):
             text='熱門美食',
             actions=[
                 MessageAction(
-                    label='台式美食',
-                    text='台式美食'
+                    label='麵包',
+                    text='麵包'
                 ),
                 MessageAction(
-                    label='日式美食',
-                    text='日式美食'
+                    label='乳製品',
+                    text='乳製品'
                 ),
                 MessageAction(
-                    label='韓式美食',
-                    text='韓式美食'
+                    label='甜點',
+                    text='甜點'
                 ),
                 MessageAction(
-                    label='美式美食',
-                    text='美式美食'
+                    label='蛋類',
+                    text='蛋類'
+                ),
+                 MessageAction(
+                    label='炸物',
+                    text='炸物'
+                ),
+                 MessageAction(
+                    label='肉類',
+                    text='肉類'
+                ),
+                 MessageAction(
+                    label='麵類',
+                    text='麵類'
+                ),
+                 MessageAction(
+                    label='飯類',
+                    text='飯類'
+                ),
+                 MessageAction(
+                    label='海鮮',
+                    text='海鮮'
+                ),
+                 MessageAction(
+                    label='湯品',
+                    text='湯品'
+                ),
+                 MessageAction(
+                    label='蔬菜',
+                    text='蔬菜'
                 )
             ]
         )
