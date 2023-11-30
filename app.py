@@ -780,8 +780,8 @@ def handle_message(event):
 } 
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
-    else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('請輸入『開始』或是下方選單來尋找美食'))
+   # else:
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage('請輸入『開始』或是下方選單來尋找美食'))
 #主程式
 import os
 if __name__ == "__main__":
