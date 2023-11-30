@@ -56,62 +56,42 @@ def handle_message(event):
         )
     )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    elif re.match('熱門美食',message):
-        buttons_template_message = TemplateSendMessage(
-        alt_text='熱門美食',
-        template=ButtonsTemplate(
-            thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
-            title='美食探勘家',
-            text='熱門美食',
-            actions=[
-                MessageAction(
-                    label='麵包',
-                    text='麵包'
-                ),
-                MessageAction(
-                    label='乳製品',
-                    text='乳製品'
-                ),
-                MessageAction(
-                    label='甜點',
-                    text='甜點'
-                ),
-                MessageAction(
-                    label='蛋類',
-                    text='蛋類'
-                ),
-                 MessageAction(
-                    label='炸物',
-                    text='炸物'
-                ),
-                 MessageAction(
-                    label='肉類',
-                    text='肉類'
-                ),
-                 MessageAction(
-                    label='麵類',
-                    text='麵類'
-                ),
-                 MessageAction(
-                    label='飯類',
-                    text='飯類'
-                ),
-                 MessageAction(
-                    label='海鮮',
-                    text='海鮮'
-                ),
-                 MessageAction(
-                    label='湯品',
-                    text='湯品'
-                ),
-                 MessageAction(
-                    label='蔬菜',
-                    text='蔬菜'
-                )
-            ]
-        )
-    )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    #elif re.match('熱門美食',message):
+        #buttons_template_message = TemplateSendMessage(
+        #alt_text='熱門美食',
+        #template=ButtonsTemplate(
+            #thumbnail_image_url='https://as.chdev.tw/web/article/5/8/4/585d040b-89f5-489b-8e32-ad1797bb748e1645430126.jpg',
+            #title='美食探勘家',
+            #text='熱門美食',
+            #actions=[
+             #   MessageAction(
+              #      label='麵包',
+               #     text='麵包'
+                #),
+                #MessageAction(
+                 #   label='乳製品',
+                  #  text='乳製品'
+                #),
+                #MessageAction(
+                 #   label='甜點',
+                  #  text='甜點'
+                #),
+                #MessageAction(
+                 #   label='蛋類',
+                  #  text='蛋類'
+                #),
+                 #MessageAction(
+                  #  label='炸物',
+                   # text='炸物'
+                #),
+                 #MessageAction(
+                  #  label='蔬菜',
+                   # text='蔬菜'
+                #)
+            #]
+        #)
+    #)
+        #line_bot_api.reply_message(event.reply_token, buttons_template_message)
     elif re.match('美食查詢',message):
         buttons_template_message = TemplateSendMessage(
         alt_text='美食查詢',
